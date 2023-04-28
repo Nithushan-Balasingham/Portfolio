@@ -4,6 +4,8 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import emailjs from '@emailjs/browser'
 import {MapContainer, Popup, TileLayer, Marker} from 'react-leaflet'
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact =()=>{
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -25,7 +27,7 @@ const Contact =()=>{
             )
             .then(
                 ()=>{
-                    alert('Message sucessfully sent!')
+                    toast.success("Sent successfully")
                     window.location.reload(false)
                 },
                 ()=>{
@@ -36,6 +38,23 @@ const Contact =()=>{
     }
     return(
        <>
+       <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            closeButton={true}
+            style={{ top: '60px', right: '10px' }}
+            toastStyle={{ backgroundColor: '#212529', color: '#fff' }}
+            toastClassName="toast-container"
+            bodyClassName="toast-body"
+            theme="light"/>  
+
         <div className='container contact-page'>
             <div className='text-zone'>
                 <h1>
@@ -65,7 +84,7 @@ const Contact =()=>{
                                 <textarea placeholder='Message' name='message' required></textarea>
                             </li>
                             <li>
-                                <input type='submit' className='flat-button' value="SEND"/>
+                                <button className='flat-button'>Submit</button>
                             </li>                     
                         </ul>
                     </form>
