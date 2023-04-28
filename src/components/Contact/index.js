@@ -20,10 +20,10 @@ const Contact =()=>{
         e.preventDefault()
         emailjs
             .sendForm (
-                'service_speapjg',
-                'template_avprp8l',
+                'Your_service_ID',
+                'Your_Public_ID',
                 refForm.current,
-                '_hNAcp0N3H2aQY4or'
+                'Your_Public KEy'
             )
             .then(
                 ()=>{
