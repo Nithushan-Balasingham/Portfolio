@@ -66,4 +66,37 @@
             color: #000000;
         }
     }
+
+   
+}
+.in{
+    h1{
+        position: absolute;
+        display: flex;
+        color: white;
+        width: auto;
+        top: 4%;
+        padding-left: 140px;
+        font-size: 50px;
+        font-family: 'Helvetica';
+        font-weight: bold;
+      
+        
+      }
+      .info{
+        position: absolute;
+          top: 110px;
+          left: 11%;
+          width:auto;
+          margin: auto;
+          color: #25f405;
+          font-family: 'Helvetica';
+          line-height: 300%;
+          font-size: 25px;
+          font-weight: 300;
+          opacity: 0;
+          animation: fadeIn 1s 1.5s;
+          animation-fill-mode: forwards;
+         
+    }
 }
